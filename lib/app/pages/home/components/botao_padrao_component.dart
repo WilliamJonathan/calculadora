@@ -22,9 +22,10 @@ class BotaoPadraoComponent extends StatelessWidget {
         backgroundColor: corFundo,
       ),
       icon: Padding(
-        padding: const EdgeInsets.all(12),
+        padding: const EdgeInsets.all(6),
         child: Text(
           texto,
+          textAlign: TextAlign.center,
           style: TextStyle(
             fontSize: 32,
             fontWeight: FontWeight.w500,
