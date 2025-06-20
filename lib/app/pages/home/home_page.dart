@@ -9,6 +9,15 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  final TextEditingController controllerDisplay = TextEditingController();
+  String texto = 'dsasd';
+
+  @override
+  void dispose() {
+    controllerDisplay.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,15 +27,27 @@ class _HomePageState extends State<HomePage> {
         child: Column(
           children: [
             Expanded(
-              child: Center(
-                child: Text('display', style: TextStyle(color: Colors.white)),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  Expanded(
+                    child: Text(
+                      texto,
+                      textAlign: TextAlign.end,
+                      style: TextStyle(color: Colors.green, fontSize: 32),
+                    ),
+                  ),
+                ],
               ),
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [IconButton(onPressed: () {}, icon: Icon(Icons.clear))],
             ),
-            Divider(),
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 25),
+              child: Divider(),
+            ),
             Expanded(
               flex: 2,
               child: Column(
