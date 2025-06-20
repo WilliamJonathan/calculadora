@@ -10,7 +10,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   final TextEditingController controllerDisplay = TextEditingController();
-  String texto = 'dsasd';
+  String texto = '123';
 
   @override
   void dispose() {
